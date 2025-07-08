@@ -192,7 +192,7 @@ The backend is organized in a modular FastAPI structure that separates concerns 
   API_KEY=your_40_character_api_key_here
   EMAIL_ADDRESS=your_gmail_address@gmail.com
   EMAIL_PASSWORD=your_gmail_app_password
-  DOMAIN_SENDER=noreply@magasignal.com
+  DOMAIN_SENDER=noreply@smallcapsignal.com
   ```
 
 #### 3. Route Handlers (API Endpoints)
@@ -564,7 +564,7 @@ API_KEY=your_40_character_api_key_here
 # Email Configuration
 EMAIL_ADDRESS=your_gmail_address@gmail.com
 EMAIL_PASSWORD=your_gmail_app_password
-DOMAIN_SENDER=noreply@magasignal.com
+DOMAIN_SENDER=noreply@smallcapsignal.com
 
 # Database (auto-configured, no changes needed)
 # Databases are created automatically in /backend/data/
@@ -575,7 +575,7 @@ DOMAIN_SENDER=noreply@magasignal.com
 1. **Clone the repository:**
    ```bash
    git clone <repository_url>
-   cd magasignal
+   cd smallcapsignal
    ```
 
 2. **Install frontend dependencies:**

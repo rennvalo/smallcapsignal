@@ -126,8 +126,8 @@ const Contact = () => {
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-semibold">Email</p>
-                      <a href="mailto:support@magasignal.com" className="text-maga-red hover:text-maga-darkRed">
-                        support@magasignal.com
+                      <a href="mailto:support@smallcapsignal.com" className="text-maga-red hover:text-maga-darkRed">
+                        support@smallcapsignal.com
                       </a>
                     </div>
                     <div>

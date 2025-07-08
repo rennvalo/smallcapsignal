@@ -14,7 +14,7 @@ const ProtectedAdminRoute = () => {
   const { data: configData, isLoading } = useQuery({
     queryKey: ["serverConfig"],
     queryFn: async () => {
-      const response = await fetch("https://www.magasignal.com/config");
+      const response = await fetch("https://www.smallcapsignal.com/config");
       if (!response.ok) {
         throw new Error("Failed to fetch server config");
       }
@@ -28,7 +28,7 @@ const ProtectedAdminRoute = () => {
       const verifyKey = async () => {
         try {
           console.log("Attempting to verify key:", urlKey);
-          const response = await fetch("https://www.magasignal.com/verify-key", {
+          const response = await fetch("https://www.smallcapsignal.com/verify-key", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

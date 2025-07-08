@@ -57,7 +57,7 @@ const Privacy = () => {
             <p className="mb-4">
               If you have any questions about this privacy policy or our privacy practices, please contact us at:
             </p>
-            <p className="mb-4">Email: privacy@magasignal.com</p>
+            <p className="mb-4">Email: privacy@smallcapsignal.com</p>
           </div>
         </div>
       </main>

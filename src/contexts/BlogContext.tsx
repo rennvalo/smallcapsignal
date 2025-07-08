@@ -33,8 +33,8 @@ export const BlogProvider = ({ children }: BlogProviderProps) => {
   });
   
   //const API_URL = "http://localhost:8000/posts";
-  const API_URL = "https://www.magasignal.com/posts";
-  const CONFIG_URL = "https://www.magasignal.com/config";
+  const API_URL = "https://www.smallcapsignal.com/posts";
+  const CONFIG_URL = "https://www.smallcapsignal.com/config";
   
   // Helper function to format API key consistently
   const formatApiKey = (key: string): string => {

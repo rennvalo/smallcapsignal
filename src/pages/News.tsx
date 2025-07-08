@@ -42,8 +42,8 @@ const News = () => {
                 </p>
                 
                 <div className="mt-6 p-4 bg-muted rounded-md">
-                  <p className="font-medium">Visit: <a href="https://www.magasignal.com" className="text-maga-red hover:underline">www.magasignal.com</a></p>
-                  <p className="font-medium">Contact: Renn – (303) 250-5818 | <a href="mailto:support@magasignal.com" className="text-maga-red hover:underline">support@magasignal.com</a></p>
+                  <p className="font-medium">Visit: <a href="https://www.smallcapsignal.com" className="text-maga-red hover:underline">www.smallcapsignal.com</a></p>
+                  <p className="font-medium">Contact: Renn – (303) 250-5818 | <a href="mailto:support@smallcapsignal.com" className="text-maga-red hover:underline">support@smallcapsignal.com</a></p>
                 </div>
               </div>
             </article>

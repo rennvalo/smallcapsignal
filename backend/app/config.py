@@ -2,8 +2,11 @@
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load environment variables from the same directory as this file
+dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
+load_dotenv(dotenv_path=dotenv_path)
+load_dotenv(dotenv_path=dotenv_path, override=True)
+print("File exists:", os.path.isfile(dotenv_path))
 
 # API key for authentication
 API_KEY = os.getenv("API_KEY")

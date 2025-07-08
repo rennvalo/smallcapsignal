@@ -16,7 +16,7 @@ const BlogPostPage = () => {
     queryFn: async () => {
       // Use the available posts from the main feed
       // This avoids having to create a new endpoint just for individual posts
-      const response = await fetch("https://www.magasignal.com/posts");
+      const response = await fetch("https://www.smallcapsignal.com/posts");
       if (!response.ok) {
         throw new Error("Failed to fetch posts");
       }

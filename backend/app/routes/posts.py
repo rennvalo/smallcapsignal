@@ -87,22 +87,22 @@ async def get_rss_feed(db: Session = Depends(get_db)):
     rss_content += '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">\n'
     rss_content += '<channel>\n'
     rss_content += '<title>MAGA Signal Blog</title>\n'
-    rss_content += '<link>https://www.magasignal.com</link>\n'
+    rss_content += '<link>https://www.smallcapsignal.com</link>\n'
     rss_content += '<description>Real-time alerts for Trump\'s market-moving posts</description>\n'
     rss_content += '<language>en-us</language>\n'
     rss_content += f'<lastBuildDate>{datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S GMT")}</lastBuildDate>\n'
     rss_content += '<image>\n'
-    rss_content += '<url>https://www.magasignal.com/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png</url>\n'
+    rss_content += '<url>https://www.smallcapsignal.com/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png</url>\n'
     rss_content += '<title>MAGA Signal</title>\n'
-    rss_content += '<link>https://www.magasignal.com</link>\n'
+    rss_content += '<link>https://www.smallcapsignal.com</link>\n'
     rss_content += '</image>\n'
     
     # Add items
     for post in posts:
         rss_content += '<item>\n'
         rss_content += f'<title>{post.title}</title>\n'
-        rss_content += f'<link>https://www.magasignal.com/post/{post.id}</link>\n'
-        rss_content += f'<guid>https://www.magasignal.com/post/{post.id}</guid>\n'
+        rss_content += f'<link>https://www.smallcapsignal.com/post/{post.id}</link>\n'
+        rss_content += f'<guid>https://www.smallcapsignal.com/post/{post.id}</guid>\n'
         rss_content += f'<pubDate>{post.createdAt.strftime("%a, %d %b %Y %H:%M:%S GMT")}</pubDate>\n'
         
         # Escape HTML in content
@@ -113,7 +113,7 @@ async def get_rss_feed(db: Session = Depends(get_db)):
             rss_content += f'<author>{post.author}</author>\n'
         
         # Add media:content for the logo
-        rss_content += '<media:content url="https://www.magasignal.com/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" medium="image" />\n'
+        rss_content += '<media:content url="https://www.smallcapsignal.com/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" medium="image" />\n'
         
         rss_content += '</item>\n'
     

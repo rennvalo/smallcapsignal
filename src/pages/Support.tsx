@@ -53,7 +53,7 @@ const Support = () => {
                     <AccordionTrigger>How do I report an issue with the website?</AccordionTrigger>
                     <AccordionContent>
                       If you encounter any technical issues or want to report a problem with our content,
-                      please use our contact form or email support@magasignal.com with details about the issue.
+                      please use our contact form or email support@smallcapsignal.com with details about the issue.
                     </AccordionContent>
                   </AccordionItem>
                   
@@ -82,7 +82,7 @@ const Support = () => {
                     <a href="/contact">Contact Support</a>
                   </Button>
                   <Button variant="outline" asChild>
-                    <a href="mailto:support@magasignal.com">Email Us</a>
+                    <a href="mailto:support@smallcapsignal.com">Email Us</a>
                   </Button>
                 </div>
               </CardContent>

@@ -28,7 +28,7 @@ const SubscriberManager = ({ apiKey }: SubscriberManagerProps) => {
   const { data: subscribers = [], isLoading, error } = useQuery({
     queryKey: ["subscribers"],
     queryFn: async () => {
-      const response = await fetch("https://www.magasignal.com/subscribers");
+      const response = await fetch("https://www.smallcapsignal.com/subscribers");
       if (!response.ok) {
         throw new Error("Failed to fetch subscribers");
       }
@@ -39,7 +39,7 @@ const SubscriberManager = ({ apiKey }: SubscriberManagerProps) => {
   // Add subscriber mutation
   const addSubscriberMutation = useMutation({
     mutationFn: async (email: string) => {
-      const response = await fetch("https://www.magasignal.com/subscribe", {
+      const response = await fetch("https://www.smallcapsignal.com/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const SubscriberManager = ({ apiKey }: SubscriberManagerProps) => {
       if (!apiKey) {
         throw new Error("API key is required");
       }
-      const response = await fetch(`https://www.magasignal.com/subscribers/${encodeURIComponent(email)}`, {
+      const response = await fetch(`https://www.smallcapsignal.com/subscribers/${encodeURIComponent(email)}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${apiKey}`,

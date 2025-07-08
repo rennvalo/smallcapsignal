@@ -64,7 +64,7 @@ We reserve the right to modify or update the Agreement at any time without speci
             
             <h2 className="text-2xl font-semibold mt-6 mb-4">7. Contact Information</h2>
             <p className="mb-4">
-              If you have any questions about these Terms, please contact us at legal@magasignal.com.
+              If you have any questions about these Terms, please contact us at legal@smallcapsignal.com.
             </p>
           </div>
         </div>

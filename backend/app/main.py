@@ -24,7 +24,7 @@ app = FastAPI(title="MAGA Signal API", docs_url=None, redoc_url=None, openapi_ur
 # ------------------- CORS -------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://www.magasignal.com", "https://magasignal.com", "*"],
+    allow_origins=["https://www.smallcapsignal.com", "https://smallcapsignal.com", "*"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "DELETE", "OPTIONS"],  # Added DELETE and OPTIONS
     allow_headers=["*"],
