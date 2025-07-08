@@ -20,7 +20,7 @@ def send_email(name: str, sender_email: str, message: str):
     msg = MIMEMultipart()
     msg['From'] = DOMAIN_SENDER
     msg['To'] = EMAIL_RECIPIENT
-    msg['Subject'] = f"MAGA Signal Contact: {name}"
+    msg['Subject'] = f"SMALLCAP Signal Contact: {name}"
     
     # Build email body
     body = f"""

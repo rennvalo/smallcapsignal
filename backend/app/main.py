@@ -19,7 +19,7 @@ mimetypes.add_type("text/css", ".css")
 mimetypes.add_type("text/html", ".html")
 
 # ------------------- App Setup -------------------
-app = FastAPI(title="MAGA Signal API", docs_url=None, redoc_url=None, openapi_url=None)
+app = FastAPI(title="SMALLCAP Signal API", docs_url=None, redoc_url=None, openapi_url=None)
 
 # ------------------- CORS -------------------
 app.add_middleware(

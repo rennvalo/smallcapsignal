@@ -25,12 +25,12 @@ async def subscribe(subscriber: SubscriberBase, db: Session = Depends(get_subscr
     
     # Send welcome email
     try:
-        subject = "Welcome to MAGASIGNAL – Your Edge in the Market Starts Now"
+        subject = "Welcome to smallCapSIGNAL – Your Edge in the Market Starts Now"
         body = f"""Dear {subscriber.email},
 
-Welcome to MAGASIGNAL.com — and thank you for joining a growing community of investors who don't just follow the market… they stay ahead of it.
+Welcome to smallCapSIGNAL.com — and thank you for joining a growing community of investors who don't just follow the market… they stay ahead of it.
 
-At MAGASIGNAL, we're laser-focused on giving you real-time trade analysis and actionable insights directly from the most influential posts on Truth Social. Our alerts often beat the mainstream media by more than an hour — so while others are still reading the news, you're already making moves.
+At smallCapSIGNAL, we're laser-focused on giving you real-time trade analysis and actionable insights directly from the most influential posts on Truth Social. Our alerts often beat the mainstream media by more than an hour — so while others are still reading the news, you're already making moves.
 
 How to Stay Ahead:
 You can choose how to receive alerts:
@@ -40,16 +40,16 @@ Email notifications – Delivered straight to your inbox, the moment new signals
 RSS feed – Ideal for real-time updates in your preferred news aggregator.
 
 To set up or customize your alerts, just reply to this email letting us know what works best for you.  
-Always welcome your feedback, don't hesitate to introduce yourself and let us know how MAGASIGNAL is working for you.
+Always welcome your feedback, don't hesitate to introduce yourself and let us know how smallCapSIGNAL is working for you.
 
 This is more than a subscription — it's your signal advantage.
 We're excited to help you trade smarter, faster, and with more confidence.
 
-Thank you again for joining MAGASIGNAL.
+Thank you again for joining smallCapSIGNAL.
 
 Here's to smart trades and strong returns,
-The MAGASIGNAL Team
-www.MAGASIGNAL.com"""
+The smallCapSIGNAL Team
+www.smallCapSIGNAL.com"""
         
         send_newsletter_email(subscriber.email, subject, body)
         print(f"Welcome email sent successfully to {subscriber.email}")

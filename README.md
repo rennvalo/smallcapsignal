@@ -1,9 +1,9 @@
 
-# MAGA Signal Website
+# SMALLCAP Signal Website
 
 ## Overview
 
-MAGA Signal is a comprehensive web platform that provides real-time alerts and market analysis based on political and economic developments. The website features a modern React frontend with a FastAPI backend, designed to deliver timely information to subscribers through multiple channels.
+SMALLCAP Signal is a comprehensive web platform that provides real-time alerts and market analysis based on political and economic developments. The website features a modern React frontend with a FastAPI backend, designed to deliver timely information to subscribers through multiple channels.
 
 ## Features
 

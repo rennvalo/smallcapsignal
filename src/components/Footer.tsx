@@ -57,11 +57,11 @@ const Footer = () => {
             <Link to="/" className="flex items-center mb-4">
               <img 
                 src="/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" 
-                alt="MAGASIGNAL Logo" 
+                alt="smallCapSIGNAL Logo" 
                 className="h-10 mr-2" 
               />
               <h3 className="text-xl font-bold">
-                <span className="text-white">MAGA</span>
+                <span className="text-white">SMALLCAP</span>
                 <span className="text-maga-red">SIGNAL</span>
               </h3>
             </Link>
@@ -163,7 +163,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {currentYear} MAGASIGNAL. All rights reserved.</p>
+          <p>&copy; {currentYear} smallCapSIGNAL. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="/privacy" className="hover:text-white transition-colors">
               Privacy Policy

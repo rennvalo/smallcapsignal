@@ -58,7 +58,7 @@ const Support = () => {
                   </AccordionItem>
                   
                   <AccordionItem value="item-5">
-                    <AccordionTrigger>How can I support MAGASIGNAL?</AccordionTrigger>
+                    <AccordionTrigger>How can I support smallCapSIGNAL?</AccordionTrigger>
                     <AccordionContent>
                       You can support us by subscribing to our newsletter, sharing our content on social media,
                       and making a donation if you appreciate our work. Your support helps us continue to provide

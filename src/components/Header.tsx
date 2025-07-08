@@ -48,11 +48,11 @@ const Header = () => {
             <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" 
-                alt="MAGASIGNAL Logo" 
+                alt="smallCapSIGNAL Logo" 
                 className="h-12 mr-3" 
               />
               <h1 className="text-3xl font-bold">
-                <span className="text-white">MAGA</span>
+                <span className="text-white">SMALLCAP</span>
                 <span className="text-maga-red">SIGNAL</span>
               </h1>
             </Link>

@@ -44,7 +44,7 @@ const InvestorInsights = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  "MAGA Signal has completely transformed my investment strategy. The real-time alerts on Trump's market-moving posts have helped me make informed decisions quickly. I've seen a significant improvement in my portfolio's performance."
+                  "SMALLCAP Signal has completely transformed my investment strategy. The real-time alerts on Trump's market-moving posts have helped me make informed decisions quickly. I've seen a significant improvement in my portfolio's performance."
                 </p>
               </article>
               
@@ -63,7 +63,7 @@ const InvestorInsights = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  "As a political enthusiast, I find MAGA Signal's analysis to be spot-on. Their insights go beyond just market impact and help me understand the broader implications of each statement. Definitely worth subscribing!"
+                  "As a political enthusiast, I find SMALLCAP Signal's analysis to be spot-on. Their insights go beyond just market impact and help me understand the broader implications of each statement. Definitely worth subscribing!"
                 </p>
               </article>
             </TabsContent>
@@ -83,7 +83,7 @@ const InvestorInsights = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground mb-2">
-                  Following Trump's announcement about EV tax credits, Tesla stock jumped significantly. MAGA Signal subscribers received the alert within minutes of the post, allowing for early market positioning.
+                  Following Trump's announcement about EV tax credits, Tesla stock jumped significantly. SMALLCAP Signal subscribers received the alert within minutes of the post, allowing for early market positioning.
                 </p>
                 <p className="text-sm text-gray-400">Alert sent: April 28, 2025</p>
               </article>

@@ -16,7 +16,7 @@ const Privacy = () => {
             
             <h2 className="text-2xl font-semibold mt-6 mb-4">1. Introduction</h2>
             <p className="mb-4">
-              Welcome to MAGASIGNAL ("we", "our", or "us"). We respect your privacy and are committed 
+              Welcome to smallCapSIGNAL ("we", "our", or "us"). We respect your privacy and are committed 
               to protecting your personal data. This privacy policy will inform you about how we look 
               after your personal data when you visit our website and tell you about your privacy rights.
             </p>
