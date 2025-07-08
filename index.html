@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAGA Signal</title>
+    <meta name="description" content="MAGA Signal - Your Trusted News Source" />
+    <meta name="author" content="Renn Valo" />
+
+    <meta property="og:title" content="MAGA Signal" />
+    <meta property="og:description" content="MAGA Signal - Your Trusted News Source" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TheMagaSignal" />
+    <meta name="twitter:image" content="https://www.magasignal.com/lovable-uploads/hero.jpg" />
+ 
+    <!-- Amplitude Analytics -->
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
+    <script>
+      window.amplitude = window.amplitude || {};
+      window.sessionReplay = window.sessionReplay || {};
+      window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
+      window.amplitude.init('1a1bd81eb2959695de407ad940108e35', {
+        autocapture: { elementInteractions: true },
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <!--<script src="https://cdn.gpteng.co/gptengineer.js" type="module" crossorigin></script> -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

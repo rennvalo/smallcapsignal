@@ -1,0 +1,17 @@
+services:
+  maga-signal:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEY=${API_KEY}  # This will pull from the .env file
+    volumes:
+      - ./backend:/app/backend
+      - ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
+    networks:
+      - frontend  # Same network as Nginx Proxy Manager
+    restart: always
+
+networks:
+  frontend:
+    external: true  # Ensure this matches an existing external network
