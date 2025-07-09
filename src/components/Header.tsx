@@ -47,7 +47,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" 
+                src="/site-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" 
                 alt="smallCapSIGNAL Logo" 
                 className="h-12 mr-3" 
               />

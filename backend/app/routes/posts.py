@@ -92,7 +92,7 @@ async def get_rss_feed(db: Session = Depends(get_db)):
     rss_content += '<language>en-us</language>\n'
     rss_content += f'<lastBuildDate>{datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S GMT")}</lastBuildDate>\n'
     rss_content += '<image>\n'
-    rss_content += '<url>https://www.smallcapsignal.com/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png</url>\n'
+    rss_content += '<url>https://www.smallcapsignal.com/site-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png</url>\n'
     rss_content += '<title>SMALLCAP Signal</title>\n'
     rss_content += '<link>https://www.smallcapsignal.com</link>\n'
     rss_content += '</image>\n'
@@ -113,7 +113,7 @@ async def get_rss_feed(db: Session = Depends(get_db)):
             rss_content += f'<author>{post.author}</author>\n'
         
         # Add media:content for the logo
-        rss_content += '<media:content url="https://www.smallcapsignal.com/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" medium="image" />\n'
+        rss_content += '<media:content url="https://www.smallcapsignal.com/site-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" medium="image" />\n'
         
         rss_content += '</item>\n'
     

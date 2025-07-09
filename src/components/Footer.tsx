@@ -56,7 +56,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" 
+                src="/site-uploads/fd97ccba-8dde-4e7a-9a9e-8bed28b27191.png" 
                 alt="smallCapSIGNAL Logo" 
                 className="h-10 mr-2" 
               />

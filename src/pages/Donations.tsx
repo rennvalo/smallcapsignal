@@ -24,7 +24,7 @@ const Donations = () => {
           
           <div className="bg-white p-6 rounded-lg">
             <img 
-              src="/lovable-uploads/0fc2fafd-f414-4273-957d-f2f2cef94457.png" 
+              src="/site-uploads/0fc2fafd-f414-4273-957d-f2f2cef94457.png" 
               alt="Venmo QR Code" 
               className="w-80 h-80"
             />
