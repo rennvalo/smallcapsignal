@@ -2,7 +2,7 @@ services:
   smallcap-signal:
     build: .
     ports:
-      - "8123:8123"  # Expose port 8123 for the backend service
+      - "8111:8111"  # Expose port 8123 for the backend service
     environment:
       - API_KEY=${API_KEY}  # This will pull from the .env file
     volumes:

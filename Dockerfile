@@ -43,7 +43,7 @@ COPY backend /app/backend
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Expose the port
-EXPOSE 8000
+EXPOSE 8111
 
 # Start supervisord
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
