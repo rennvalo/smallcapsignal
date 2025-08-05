@@ -12,12 +12,39 @@ const Index = () => {
   const { posts, isLoading, isError } = useBlog();
   const [currentPage, setCurrentPage] = useState(0);
   const postsPerPage = 2;
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState<Post[] | null>(null);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [searchError, setSearchError] = useState("");
 
   // Calculate pagination
-  const totalPages = Math.ceil(posts.length / postsPerPage);
+  const displayedPosts = searchResults !== null ? searchResults : posts;
+  const totalPages = Math.ceil(displayedPosts.length / postsPerPage);
   const startIndex = currentPage * postsPerPage;
   const endIndex = startIndex + postsPerPage;
-  const currentPosts = posts.slice(startIndex, endIndex);
+  const currentPosts = displayedPosts.slice(startIndex, endIndex);
+  const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!searchTerm.trim()) {
+      setSearchResults(null);
+      setSearchError("");
+      setSearchLoading(false);
+      return;
+    }
+    setSearchLoading(true);
+    setSearchError("");
+    try {
+      const response = await fetch(`https://www.smallcapsignal.com/posts/search?q=${encodeURIComponent(searchTerm)}`);
+      if (!response.ok) throw new Error("Search failed");
+      const data = await response.json();
+      setSearchResults(data);
+    } catch (err) {
+      setSearchError("Failed to search posts. Please try again later.");
+    } finally {
+      setSearchLoading(false);
+      setCurrentPage(0);
+    }
+  };
 
   const handlePrevious = () => {
     setCurrentPage(prev => Math.max(0, prev - 1));
@@ -36,7 +63,31 @@ const Index = () => {
 
           <h1 className="text-3xl font-bold mb-8">Latest Updates</h1>
 
-          {/* 🔄 Loading State */}
+          {/* � Search Bar */}
+          <form onSubmit={handleSearch} className="mb-8 flex gap-2">
+            <input
+              type="text"
+              placeholder="Search blog posts..."
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              className="flex-1 px-4 py-2 rounded border border-gray-700 bg-background text-white focus:outline-none focus:border-maga-red"
+            />
+            <Button type="submit" variant="default">Search</Button>
+            {searchTerm && (
+              <Button type="button" variant="outline" onClick={() => { setSearchTerm(""); setSearchResults(null); setSearchError(""); }}>
+                Clear
+              </Button>
+            )}
+          </form>
+
+          {searchLoading && (
+            <div className="text-center py-4">Searching...</div>
+          )}
+          {searchError && (
+            <div className="text-center text-maga-red py-4">{searchError}</div>
+          )}
+
+          {/* �🔄 Loading State */}
           {isLoading && (
             <div className="space-y-8">
               {[1, 2].map((i) => (
@@ -66,17 +117,17 @@ const Index = () => {
           )}
 
           {/* 🚫 Empty State */}
-          {!isLoading && !isError && posts.length === 0 && (
+          {!isLoading && !isError && displayedPosts.length === 0 && !searchLoading && (
             <div className="text-center py-12">
-              <h2 className="text-xl font-semibold mb-2">No Posts Yet</h2>
+              <h2 className="text-xl font-semibold mb-2">No Posts Found</h2>
               <p className="text-muted-foreground">
-                Check back later for updates or be the first to post!
+                {searchTerm ? "Try a different search term." : "Check back later for updates or be the first to post!"}
               </p>
             </div>
           )}
 
           {/* ✅ Posts */}
-          {!isLoading && !isError && posts.length > 0 && (
+          {!isLoading && !isError && displayedPosts.length > 0 && (
             <div>
               <div className="space-y-8">
                 {currentPosts.map((post) => (

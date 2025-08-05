@@ -12,12 +12,34 @@ from app.models.post import PostModel
 from app.database.base import get_db
 from app.utils.auth import verify_api_key
 from app.config import API_KEY
+from sqlalchemy import or_
 
 router = APIRouter()
 
 @router.get("/posts", response_model=List[Post])
 async def get_posts(db: Session = Depends(get_db)):
     posts = db.query(PostModel).order_by(PostModel.createdAt.desc()).all()
+    return [
+        Post(
+            id=post.id,
+            title=post.title,
+            content=post.content,
+            author=post.author,
+            createdAt=post.createdAt.isoformat(),
+            imageUrl=post.imageUrl
+        ) for post in posts
+    ]
+
+    # Search endpoint
+@router.get("/posts/search", response_model=List[Post])
+async def search_posts(q: str, db: Session = Depends(get_db)):
+    """Search posts by text in title or content."""
+    posts = db.query(PostModel).filter(
+        or_(
+            PostModel.title.ilike(f"%{q}%"),
+            PostModel.content.ilike(f"%{q}%")
+        )
+    ).order_by(PostModel.createdAt.desc()).all()
     return [
         Post(
             id=post.id,
