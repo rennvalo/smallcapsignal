@@ -30,3 +30,5 @@ backend/app/database/__pycache__/
 backend/app/models/__pycache__/
 backend/app/routes/__pycache__/
 backend/app/schemas/__pycache__
+__pycache__/
+*.pyc
